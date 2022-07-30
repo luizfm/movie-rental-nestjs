@@ -7,7 +7,7 @@ export type UserDocument = User & Document;
 @Schema()
 export class User {
   @Prop()
-  _id: string;
+  id: string;
 
   @Prop()
   name: string;
@@ -15,12 +15,12 @@ export class User {
   @Prop()
   email: string;
 
-  @Prop()
+  @Prop({ select: false })
   password: string;
 
   constructor() {
-    if (!this._id) {
-      this._id = randomUUID();
+    if (!this.id) {
+      this.id = randomUUID();
     }
   }
 }
