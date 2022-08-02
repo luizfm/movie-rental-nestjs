@@ -11,7 +11,6 @@ export enum PaymentStatus {
 }
 
 export interface PaymentsDto {
-  _id: string;
   status: PaymentStatus;
   type: PaymentType;
 }
