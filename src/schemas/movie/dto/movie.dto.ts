@@ -1,5 +1,4 @@
 export interface MovieDto {
-  _id: string;
   name: string;
   genre: string;
   timeDuration: number;
